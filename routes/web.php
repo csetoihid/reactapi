@@ -17,6 +17,11 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/test', function () use ($router) {
+    return 'Hello test';
+});
+
+
 $router->get('/ChartData', ['middleware' => 'auth','uses'=>'hartDataController@onAllSelect' ] );
 $router->get('/ClientReview',['middleware' => 'auth','uses'=>'ClientReviewController@onAllSelect' ] );
 $router->post('/ContactSend', ['middleware' => 'auth','uses'=>'ContactController@onContactSend'] );
