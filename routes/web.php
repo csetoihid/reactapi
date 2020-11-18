@@ -25,7 +25,7 @@ $router->get('/test', function () use ($router) {
 $router->get('/ChartData', ['middleware' => 'auth','uses'=>'hartDataController@onAllSelect' ] );
 $router->get('/ClientReview',['middleware' => 'auth','uses'=>'ClientReviewController@onAllSelect' ] );
 $router->post('/ContactSend', ['middleware' => 'auth','uses'=>'ContactController@onContactSend'] );
-$router->post('/CourseHome', ['middleware' => 'auth','uses'=>'CourseController@onSelectLimit'] );
+$router->get('/CourseHome', ['middleware' => 'auth','uses'=>'CourseController@onSelectLimit'] );
 $router->post('/CourseDetails', ['middleware' => 'auth','uses'=>'CourseController@onSelectDetails'] );
 $router->get('/CourseAll', ['middleware' => 'auth','uses'=>'CourseController@onSelectAll'] );
 $router->get('/Footer', ['middleware' => 'auth','uses'=>'FooterController@onSelectAll'] );
