@@ -10,8 +10,8 @@ class CourseController extends Controller
         $result = CoursesTableModel::all();
         return $result;
     }
-    function onSelectLimit( Request $req){
-        $result = CoursesTableModel::limit($req->input('limit'))->get();
+    function onSelectLimit(){
+        $result = CoursesTableModel::limit(4)->get();
         return $result;
     }   
 
