@@ -22,7 +22,7 @@ $router->get('/test', function () use ($router) {
 });
 
 
-$router->get('/ChartData', ['middleware' => 'auth','uses'=>'hartDataController@onAllSelect' ] );
+$router->get('/ChartData', ['middleware' => 'auth','uses'=>'ChartDataController@onAllSelect' ] );
 $router->get('/ClientReview',['middleware' => 'auth','uses'=>'ClientReviewController@onAllSelect' ] );
 $router->post('/ContactSend', ['middleware' => 'auth','uses'=>'ContactController@onContactSend'] );
 $router->get('/CourseHome', ['middleware' => 'auth','uses'=>'CourseController@onSelectLimit'] );
