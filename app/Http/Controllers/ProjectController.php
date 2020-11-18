@@ -12,8 +12,8 @@ class ProjectController extends Controller
         $result = ProjectsTableModel::all();
         return $result;
     }
-    function onSelectLimit( Request $req){
-        $result = ProjectsTableModel::limit($req->input('limit'))->get();
+    function onSelectLimit(){
+        $result = ProjectsTableModel::limit(3)->get();
         return $result;
     }   
     function onSelectDetails( Request $req){
