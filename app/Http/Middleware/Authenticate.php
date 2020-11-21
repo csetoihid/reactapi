@@ -37,6 +37,6 @@ class Authenticate
     {
         return $next($request)
         ->header('Access-Control-Allow-Origin','*')
-        ->header('Access-Control-Allow-Methods','GET, POST, PUT, DELETE, OPTIONS');
+        ->header('Access-Control-Allow-Methods','HEAD, GET, POST, PUT, PATCH, DELETE');
     }
 }
