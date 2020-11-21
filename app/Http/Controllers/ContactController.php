@@ -8,7 +8,6 @@ use App\ContacttableModel;
 class ContactController extends Controller
 {
     function onContactSend(Request $req ){
-        return 'From api';
         $name = $req->input('name');
         $email = $req->input('email');
         $msg= $req->input('msg');
