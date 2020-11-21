@@ -33,7 +33,7 @@ $router->get('/Information', ['middleware' => 'auth','uses'=>'InformationControl
 $router->get('/Services', ['middleware' => 'auth','uses'=>'ServiceController@onSelectAll'] );
 $router->get('/Projects', ['middleware' => 'auth','uses'=>'ProjectController@onSelectAll'] );
 $router->get('/ProjectsLimit', ['middleware' => 'auth','uses'=>'ProjectController@onSelectLimit'] );
-$router->post('/ProjectDetails', ['middleware' => 'auth','uses'=>'ProjectController@onSelectDetails'] );
+$router->get('/ProjectDetails/{projectId}', ['middleware' => 'auth','uses'=>'ProjectController@onSelectDetails'] );
 $router->get('/HomeVideo', ['middleware' => 'auth','uses'=>'HomeController@onSelectVideoVideo'] );
 $router->get('/HomeProjectClient', ['middleware' => 'auth','uses'=>'HomeController@onSelectProjectClients'] );
 $router->get('/HomeTech', ['middleware' => 'auth','uses'=>'HomeController@onSelectTechDes'] );

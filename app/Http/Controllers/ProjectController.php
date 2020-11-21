@@ -16,8 +16,8 @@ class ProjectController extends Controller
         $result = ProjectsTableModel::limit(3)->get();
         return $result;
     }   
-    function onSelectDetails( Request $req){
-        $id = $req->input('id');
+    function onSelectDetails( $projectId){
+        $id = $projectId;
         $result = ProjectsTableModel::where(['id' => $id])->get();
         return $result;
     }
